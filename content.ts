@@ -209,10 +209,10 @@ Start menu, bottom left, has everything in one list.
   // Friends on your profile. `url` links to their site (ideally their own Nook!).
   // Or give them `photos` (and `instagram`) and clicking them opens a little gallery of their work.
   friends: [
-    { name: 'A Friend (sample)', photo: '/photos/friends/sample-friend.svg', url: 'https://example.com' },
+    { name: 'A Friend (sample)', photo: '/photos/friends/placeholder.svg', url: 'https://example.com' },
     {
       name: 'Photo Friend (sample)',
-      photo: '/photos/friends/sample-friend.svg',
+      photo: '/photos/friends/placeholder.svg',
       instagram: 'https://www.instagram.com/',
       photos: [
         { src: '/photos/sample-mountain.svg', alt: 'Sample photo: mountains' },

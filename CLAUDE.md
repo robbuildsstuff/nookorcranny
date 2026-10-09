@@ -16,7 +16,7 @@ You are helping the owner make it theirs. They are probably not a developer. Tal
 
 Only touch `components/` or `app/` when the owner asks for a new feature or a change in how something looks or works. If you do, keep the Win98 look (bevelled grey buttons, blue title bars, pixel icons, Tahoma/VT323/Pixelify fonts) and match the code around it.
 
-Never remove the sample-free safety checks below, and never commit secrets (passwords, API keys, tokens). This site needs none.
+Never commit secrets (passwords, API keys, tokens). This site needs none.
 
 ## Setting up a new owner (do this first)
 
@@ -24,15 +24,20 @@ At the top of `site` in `content.ts`, replace the sample person:
 
 - `owner` (full name or alias), `firstName` (used in "Sam's Computer", "About Sam"), `handle` (short, lowercase)
 - `tagline` (one line on the profile)
+- `avatar`: a square picture for the profile, e.g. `'/photos/me.png'` (leave out for the pixel portrait)
 - `title` (browser tab and Google) and `description` (the line under it in Google and link previews)
-- `home`: city name, latitude, longitude and timezone (e.g. `'Europe/London'`). Drives the clock and the weather
+- `home`: city name, latitude, longitude and timezone (e.g. `'Europe/London'`). Drives the clock and the weather. Use the city centre's coordinates if you know them; the same goes for Travel pins
 - `os`: what the Start menu banner says, e.g. `{ name: 'sam', suffix: 'OS' }` shows "samOS 98"
-- `taskbar`: their email (an `email` link copies it) and socials (`url` links)
-- `readme`: `heading`, `body` (blank line = new paragraph), `signoff`
+- `taskbar`: their email (an `email` link copies it) and socials (`url` links). Remove any they don't want; if they haven't given one yet, leave the placeholder and list it as a to-do
+- `readme`: `heading`, `body` (blank line = new paragraph), `signoff`. The default background (`/photos/readme-field.svg`, a field with someone at a desk) can stay; a replacement photo works best at the same tall shape (614 x 942), with plain space between 12% and 68% of its height for the text
 - `url`: only once they have a custom domain (e.g. `'https://www.samsmith.com'`). Leave it out on vercel.app; the site works out its own address
 - Delete every item marked "(sample)" that they don't want, or rewrite it as theirs
 
-Then search the whole project for `sample` and `Sam` to catch leftovers.
+Then check for leftovers: `grep -n "sample\|Sam" content.ts` should only hit comments, and `ls public/photos` should hold no `sample-*` files they aren't using.
+
+Ask for a rough date for new things ("when did you read that?") and set `date`: dated items fill "Latest Entries" on the profile.
+
+When you're done with a round, list anything still left as a placeholder so the owner knows what to fill in.
 
 ## Folders
 
@@ -50,6 +55,10 @@ Each entry in `site.folders` is a desktop icon:
 ```
 
 Keep the Trash (`id: 'recycle'`) as the last folder. It sits in the top-right corner.
+
+To remove a folder, delete its whole `{ id: ..., items: [...] }` entry (and any photos only it used). Or add `hidden: true` to keep it for later.
+
+The note with `id: 'quotes'` (in Thoughts by default) also feeds the quotes that drift across the sky on the field page. If the owner removes Thoughts, move that note to another folder or tell them the field quotes will stop.
 
 Special folders (put the extra field on the folder, keep `items: []` or add items too):
 
@@ -78,7 +87,7 @@ Every item needs a unique `type`, `id` and `title`. Optional on all: `date: '202
 { type: 'folder', id: 'city-guides', title: 'City Guides', items: [ /* more items */ ] }
 ```
 
-City icons available for `icon`: paris, ottawa, stockholm, london, montreal, boston, new-york, los-angeles, melbourne, mexico-city, denver, copenhagen, gothenburg, nashville, madrid, lisbon, toronto. Others: folder, trash, computer, notepad, recipe, globe, film, book, image, mail, camera, music, km, runner, cycling, tools, map, cards, weather, wardrobe. A new icon is a pixel grid in `components/desktop/cityIcons.ts` (one letter per colour); copy an existing one.
+City icons available for `icon`: paris, ottawa, stockholm, london, montreal, boston, new-york, los-angeles, melbourne, mexico-city, denver, copenhagen, gothenburg, nashville, madrid, lisbon, toronto. Others: folder, trash, computer, notepad, recipe, globe, film, book, image, mail, camera, music, km, runner, cycling, tools, map, cards, weather, wardrobe. No icon that fits a new folder (climbing, coffee, guitar…)? Draw one: add a new entry to `cityArt` in `components/desktop/cityIcons.ts` (a small grid of letters, one letter per colour; copy an existing one and its palette). Its key automatically becomes a valid `icon` everywhere, not just for cities.
 
 ## Links (ids)
 
@@ -86,7 +95,7 @@ City icons available for `icon`: paris, ottawa, stockholm, london, montreal, bos
 
 ## Friends
 
-`site.friends`: `{ name, photo, url? }` links to their site (ideally their own Nook). Or `{ name, photo, instagram?, photos: [{ src, alt }] }` opens a little gallery of their work at `#about.their-name`.
+`site.friends`: `{ name, photo, url? }` links to their site (ideally their own Nook). No picture of them yet? Use `photo: '/photos/friends/placeholder.svg'`. Or `{ name, photo, instagram?, photos: [{ src, alt }] }` opens a little gallery of their work at `#about.their-name`.
 
 ## Photos
 
@@ -103,7 +112,7 @@ City icons available for `icon`: paris, ottawa, stockholm, london, montreal, bos
 The site is hosted on Vercel and connected to the owner's GitHub repo. **Every push to `main` goes live in about a minute.** So:
 
 1. Make the change
-2. Check it: `npm run build` must pass, and `npx eslint .` should be clean
+2. Check it: `npm run build` must pass, and `npx eslint .` should show no errors
 3. If you changed how something looks, run it (`npm run dev`, then open http://localhost:3000) and check both a desktop-sized and a phone-sized window
 4. Commit with a short plain message ("Add Lisbon photos to Travel"), push to `main`
 5. Tell the owner what changed and the link to see it (e.g. `their-site.vercel.app/#food.pasta`)

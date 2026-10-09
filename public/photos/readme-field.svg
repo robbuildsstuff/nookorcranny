@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 614 942" shape-rendering="crispEdges">
-  <!-- A sample README background: sky up top, a big field, someone at a desk near the bottom.
+  <!-- The default README background: sky up top, a big field, someone at a desk near the bottom.
        The README text sits on the grass between 12% and 68% of the height. Swap in your own photo (same shape works best). -->
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe3ef"/><stop offset="1" stop-color="#e6e2cc"/></linearGradient>
