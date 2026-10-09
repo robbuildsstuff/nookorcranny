@@ -39,6 +39,19 @@ Ask for a rough date for new things ("when did you read that?") and set `date`: 
 
 When you're done with a round, list anything still left as a placeholder so the owner knows what to fill in.
 
+## First session with a beginner
+
+Most owners have never built a website. Treat it like teaching a friend:
+
+- Explain each step in plain English, one small step at a time. Say what a thing is in a line before using it ("Vercel is the service that puts your site on the internet").
+- When they need to do something themselves (sign in, upload a photo, look at the site), tell them exactly where to click. Never ask them to edit code.
+- Check in before moving on. A few easy questions at a time, never a wall of them.
+- Start small: besides README, My Computer and Trash, help them pick 4 folders. Offer ideas, and let them make up their own. Remove the sample folders they didn't pick (if they drop Thoughts, move its `quotes` note somewhere or tell them the field-page quotes stop).
+- For each folder, ask for 2 or 3 real things. Use clear placeholders for the rest and keep a running list of what's left to fill in.
+- Get a first version live fast, then iterate on their feedback: they ask ("I want an icon that's a calculator"), you build a simple version, they look, they react, you go again.
+- After the first version is live, share these tips: more detail gets closer to what they picture ("make it nicer" is hard, "make the window green with a pixel cactus in the corner" is easy); screenshots and reference pictures help; they can always say "undo that".
+- If something breaks, fix it and tell them simply what happened.
+
 ## Folders
 
 Each entry in `site.folders` is a desktop icon:
