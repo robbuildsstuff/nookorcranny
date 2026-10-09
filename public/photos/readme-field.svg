@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 614 942" shape-rendering="crispEdges">
+  <!-- A sample README background: sky up top, a big field, someone at a desk near the bottom.
+       The README text sits on the grass between 12% and 68% of the height. Swap in your own photo (same shape works best). -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe3ef"/><stop offset="1" stop-color="#e6e2cc"/></linearGradient>
+    <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f9a4a"/><stop offset="1" stop-color="#4f7a36"/></linearGradient>
+    <pattern id="tuft" width="18" height="14" patternUnits="userSpaceOnUse"><rect x="3" y="4" width="2" height="5" fill="#5d8a3f"/><rect x="12" y="9" width="2" height="4" fill="#87ad5a"/></pattern>
+  </defs>
+  <rect width="614" height="86" fill="url(#sky)"/>
+  <rect y="86" width="614" height="856" fill="url(#grass)"/>
+  <rect y="86" width="614" height="856" fill="url(#tuft)"/>
+  <rect y="86" width="614" height="3" fill="#a3b878"/>
+  <g transform="translate(270 700) scale(6)">
+    <rect x="-5" y="18" width="22" height="2" fill="#2f4a22" opacity=".5"/>
+    <rect x="-4" y="11" width="1" height="8" fill="#4a2e1a"/><rect x="3" y="11" width="1" height="8" fill="#4a2e1a"/><rect x="-4" y="11" width="8" height="1" fill="#5a3a20"/>
+    <rect x="-3" y="0" width="6" height="4" fill="#2a1a10"/><rect x="-2" y="4" width="4" height="1" fill="#c8986a"/>
+    <rect x="-4" y="5" width="8" height="6" fill="#ece4cc"/><rect x="3" y="7" width="3" height="2" fill="#ece4cc"/>
+    <rect x="-3" y="11" width="7" height="2" fill="#2a2a30"/><rect x="3" y="13" width="2" height="5" fill="#2a2a30"/>
+    <rect x="5" y="9" width="12" height="1" fill="#7a4a2a"/><rect x="6" y="10" width="1" height="8" fill="#5a3a20"/><rect x="15" y="10" width="1" height="8" fill="#5a3a20"/>
+    <rect x="7" y="1" width="8" height="7" fill="#d8ccaa"/><rect x="8" y="2" width="6" height="5" fill="#2a7a78"/><rect x="9" y="8" width="4" height="1" fill="#c8bc98"/>
+  </g>
+</svg>
