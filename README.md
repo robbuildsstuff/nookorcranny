@@ -1,4 +1,4 @@
-# Nook
+# Nook or Cranny
 
 Your own corner of the internet. A little Windows 98 desktop full of your stuff: what you eat, read, wear, think about and where you've been. Link it to your friends' Nooks. No feed, no algorithm, no timeline.
 
@@ -8,7 +8,7 @@ You need a free [GitHub](https://github.com/signup) account and [Claude](https:/
 
 **1. Put your copy online.** Click this button:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/robbuildsstuff/nook&repository-name=my-nook)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/robbuildsstuff/nookorcranny&repository-name=my-nook)
 
 - Sign in to Vercel with your GitHub account
 - Give your site a name (this becomes your address: `your-name.vercel.app`)
@@ -21,7 +21,7 @@ You now have your own copy of the code on GitHub and a live site with sample con
 **3. Paste this prompt:**
 
 ```text
-I just set up my own Nook (a personal website that looks like a Windows 98 desktop).
+I just set up my own Nook or Cranny site (a personal website that looks like a Windows 98 desktop).
 Read CLAUDE.md first, it explains how everything works.
 
 Then interview me, a few questions at a time, to make it mine:

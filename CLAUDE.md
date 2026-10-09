@@ -1,12 +1,12 @@
 @AGENTS.md
 
-# Nook: how this site works
+# Nook or Cranny: how this site works
 
 Read this whole file before changing anything.
 
 ## What this is
 
-A Nook is one person's corner of the internet. It looks like a Windows 98 desktop: folders of their stuff (food, books, travel, clothes, thoughts, whatever they're into), a profile with a Friend Space that links to friends' Nooks, a README that opens on arrival, Solitaire, live weather, and a second "field" page with a meditation timer. It is not a portfolio, a blog or a feed. No algorithm, no timeline. Just their stuff.
+Nook or Cranny gives one person their own corner of the internet (their "nook"). It looks like a Windows 98 desktop: folders of their stuff (food, books, travel, clothes, thoughts, whatever they're into), a profile with a Friend Space that links to friends' Nooks, a README that opens on arrival, Solitaire, live weather, and a second "field" page with a meditation timer. It is not a portfolio, a blog or a feed. No algorithm, no timeline. Just their stuff.
 
 You are helping the owner make it theirs. They are probably not a developer. Talk plainly, avoid jargon, and explain what you changed in a sentence or two.
 
